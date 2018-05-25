@@ -3,7 +3,7 @@
 
 use constant MAX => 100;
 use constant bn => 5;
-$nFactor = MAX / bn;
+$nFactor = int(MAX % bn ? MAX / bn + 1 : MAX / bn);
 @C = (0) * bn;
 
 Main();
