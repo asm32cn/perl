@@ -13,11 +13,11 @@ sub Main{
 }
 
 sub AdditiveHash{
-	my ($s, $nPrime) = @_;
-	my $n = length($s);
+	my ($strKey, $nPrime) = @_;
+	my $n = length($strKey);
 	my $nHash = $n;
 	for(my $i = 0; $i < $n; $i++){
-		$nHash += ord(substr($s, $i, 1));
+		$nHash += ord(substr($strKey, $i, 1));
 	}
 	$nHash % $nPrime;
 }
