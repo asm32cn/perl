@@ -15,7 +15,7 @@ my $username = 'root';
 my $password = '';
 
 my $dbh = DBI->connect($dsn, $username, $password) or die $DBI::errstr;
-my $sth = $dbh->prepare('show databses');
+my $sth = $dbh->prepare('show databases');
 $sth->execute();
 
 while(my @row = $sth->fetchrow_array()){
